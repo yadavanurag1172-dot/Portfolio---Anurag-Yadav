@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Anurag Yadav - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+  <!-- FIXED NAVIGATION -->
+  <nav class="nav" id="nav">
+    <a class="nav-logo" href="#">ANURAG</a>
+    <ul class="nav-links">
+  <li><a href="#" onclick="scrollToPanel('panel-work'); return false;">Work</a></li>
+  <li><a href="#" onclick="scrollToPanel('panel-about'); return false;">About</a></li>
+  <li><a href="#" onclick="scrollToPanel('panel-contact'); return false;">Contact</a></li>
+</ul>
+  </nav>
+
+  <!-- ===== HORIZONTAL SCROLL APP ===== -->
+  <div id="app">
+    <div id="track">
+
+  <!-- PANEL 1 · LANDING -->
+  <section class="panel panel-hero" id="panel-hero">
+    <div class="hero-bg-text" aria-hidden="true">AY</div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="hero-eyebrow">Motion & Graphic Designer</p>
+        <h1 class="hero-title">
+          Anurag&nbsp;Yadav
+          <span class="hero-word-wrapper" aria-live="polite">
+            <span class="hero-word active">motion.</span>
+            <span class="hero-word">brands.</span>
+            <span class="hero-word">visuals.</span>
+            <span class="hero-word">stories.</span>
+            <span class="hero-word">identity.</span>
+          </span>
+        </h1>
+      </div>
+      <div class="hero-right">
+        <p class="hero-tagline">Crafting motion, identity, and visual stories that move people and brands forward.</p>
+        <p class="hero-motto">Based in India. Available worldwide.</p>
+        <button class="work-btn" onclick="scrollToPanel('panel-work')">
+          View Work
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="hero-signature">
+      <img src="signature.png" alt="Anurag Yadav Signature" class="signature-img" />
+    </div>
+    <div class="scroll-arrow" id="scrollArrow" title="Scroll to explore" onclick="scrollToPanel('panel-work')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"/>
+        <polyline points="19 12 12 19 5 12"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- PANEL 2 · WORK HUB -->
+  <section class="panel panel-work" id="panel-work">
+    <div class="work-hub">
+      <div class="work-half work-static" onclick="scrollToPanel('panel-static')">
+        <div class="work-half-inner">
+          <span class="work-label">01</span>
+          <h2 class="work-half-title">Static<br/>Work</h2>
+          <p class="work-half-desc">Brand identities, posters, editorial layouts and visual design.</p>
+          <span class="work-arrow">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </div>
+      <div class="work-divider"></div>
+      <div class="work-half work-motion" onclick="scrollToPanel('panel-motion')">
+        <div class="work-half-inner">
+          <span class="work-label">02</span>
+          <h2 class="work-half-title">Motion<br/>Work</h2>
+          <p class="work-half-desc">Motion graphics, animations, reels and video design.</p>
+          <span class="work-arrow">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- PANEL 3 · STATIC WORK -->
+<section class="panel panel-static" id="panel-static">
+  <div class="work-page-inner">
+    <div class="work-page-header">
+      <span class="work-page-num">01</span>
+      <h2 class="work-page-title">Static Work</h2>
+      <p class="work-page-sub">Brand identities, posters, editorial and visual design.</p>
+    </div>
+    <div class="static-grid">
+
+      <!-- PROJECT CARD — duplicate this block for each project -->
+      <!-- Replace: src="images/static/project1.jpg" with your image path -->
+      <!-- Replace: Project Title with your actual title -->
+      <!-- Replace: Category with your category e.g. Brand Identity -->
+
+      <div class="static-card" onclick="openLightbox('images/static/project1.jpg', 'Project Title One')">
+        <div class="static-card-img">
+          <img src="images/static/project1.jpg" alt="Project Title One" />
+          <div class="static-card-overlay">
+            <span class="static-view-btn">View &rarr;</span>
+          </div>
+        </div>
+        <div class="static-card-info">
+          <span class="static-card-category">Brand Identity</span>
+          <h3 class="static-card-title">Project Title One</h3>
+        </div>
+      </div>
+
+      <div class="static-card" onclick="openLightbox('images/static/project2.jpg', 'Project Title Two')">
+        <div class="static-card-img">
+          <img src="images/static/project2.jpg" alt="Project Title Two" />
+          <div class="static-card-overlay">
+            <span class="static-view-btn">View &rarr;</span>
+          </div>
+        </div>
+        <div class="static-card-info">
+          <span class="static-card-category">Poster Design</span>
+          <h3 class="static-card-title">Project Title Two</h3>
+        </div>
+      </div>
+
+      <div class="static-card" onclick="openLightbox('images/static/project3.png', 'Project Title Three')">
+        <div class="static-card-img">
+          <img src="images/static/project3.png" alt="Project Title Three" />
+          <div class="static-card-overlay">
+            <span class="static-view-btn">View &rarr;</span>
+          </div>
+        </div>
+        <div class="static-card-info">
+          <span class="static-card-category">Visual Design</span>
+          <h3 class="static-card-title">Project Title Three</h3>
+        </div>
+      </div>
+
+      <div class="static-card" onclick="openLightbox('images/static/project4.jpg', 'Project Title Four')">
+        <div class="static-card-img">
+          <img src="images/static/project4.jpg" alt="Project Title Four" />
+          <div class="static-card-overlay">
+            <span class="static-view-btn">View &rarr;</span>
+          </div>
+        </div>
+        <div class="static-card-info">
+          <span class="static-card-category">Editorial</span>
+          <h3 class="static-card-title">Project Title Four</h3>
+        </div>
+      </div>
+
+      <div class="static-card" onclick="openLightbox('images/static/project5.png', 'Project Title Five')">
+        <div class="static-card-img">
+          <img src="images/static/project5.jpg" alt="Project Title Five" />
+          <div class="static-card-overlay">
+            <span class="static-view-btn">View &rarr;</span>
+          </div>
+        </div>
+        <div class="static-card-info">
+          <span class="static-card-category">Typography</span>
+          <h3 class="static-card-title">Project Title Five</h3>
+        </div>
+      </div>
+
+      <div class="static-card" onclick="openLightbox('images/static/project6.png', 'Project Title Six')">
+        <div class="static-card-img">
+          <img src="images/static/project6.png" alt="Project Title Six" />
+          <div class="static-card-overlay">
+            <span class="static-view-btn">View &rarr;</span>
+          </div>
+        </div>
+        <div class="static-card-info">
+          <span class="static-card-category">Brand Identity</span>
+          <h3 class="static-card-title">Project Title Six</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- PANEL 4 · MOTION WORK -->
+<section class="panel panel-motion" id="panel-motion">
+  <div class="work-page-inner">
+    <div class="work-page-header">
+      <span class="work-page-num">02</span>
+      <h2 class="work-page-title">Motion Work</h2>
+      <p class="work-page-sub">Motion graphics, animations, reels and video design.</p>
+    </div>
+    <div class="motion-grid">
+
+      <!-- VIDEO CARD — duplicate for each video -->
+      <!-- Replace: src="videos/video1.mp4" with your video file path -->
+      <!-- Replace: poster="images/motion/thumb1.jpg" with a thumbnail (optional) -->
+      <!-- Replace title and category as needed -->
+
+      <div class="motion-card">
+        <div class="motion-card-video">
+          <video
+            src="videos/video1.mp4"
+            poster="images/motion/thumb1.jpg"
+            preload="none"
+            loop
+            muted
+            playsinline
+          ></video>
+          <div class="motion-card-overlay" onclick="openVideoModal('videos/video1.mp4')">
+            <div class="motion-play-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="motion-card-info">
+          <span class="motion-card-category">Motion Graphics</span>
+          <h3 class="motion-card-title">Video Title One</h3>
+        </div>
+      </div>
+
+      <div class="motion-card">
+        <div class="motion-card-video">
+          <video
+            src="videos/video2.mp4"
+            poster="images/motion/thumb2.jpg"
+            preload="none"
+            loop
+            muted
+            playsinline
+          ></video>
+          <div class="motion-card-overlay" onclick="openVideoModal('videos/video2.mp4')">
+            <div class="motion-play-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="motion-card-info">
+          <span class="motion-card-category">Animation</span>
+          <h3 class="motion-card-title">Video Title Two</h3>
+        </div>
+      </div>
+
+      <div class="motion-card">
+        <div class="motion-card-video">
+          <video
+            src="videos/video3.mp4"
+            poster="images/motion/thumb3.jpg"
+            preload="none"
+            loop
+            muted
+            playsinline
+          ></video>
+          <div class="motion-card-overlay" onclick="openVideoModal('videos/video3.mp4')">
+            <div class="motion-play-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="motion-card-info">
+          <span class="motion-card-category">Brand Film</span>
+          <h3 class="motion-card-title">Video Title Three</h3>
+        </div>
+      </div>
+
+      <div class="motion-card">
+        <div class="motion-card-video">
+          <video
+            src="videos/video4.mp4"
+            poster="images/motion/thumb4.jpg"
+            preload="none"
+            loop
+            muted
+            playsinline
+          ></video>
+          <div class="motion-card-overlay" onclick="openVideoModal('videos/video4.mp4')">
+            <div class="motion-play-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="motion-card-info">
+          <span class="motion-card-category">Reel</span>
+          <h3 class="motion-card-title">Video Title Four</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ <!-- PANEL 5 · ABOUT -->
+<section class="panel panel-about-new" id="panel-about">
+  <div class="about-new-inner">
+    <div class="about-new-left">
+      <img src="assets/anurag.png" alt="Anurag Yadav" class="about-photo-real" />
+    </div>
+    <div class="about-new-right">
+      <span class="about-new-num">03</span>
+      <h2 class="about-new-title">About Me</h2>
+      <p class="about-new-desc">I'm Anurag Yadav — a Motion and Graphic Designer based in India. I craft visual identities, motion graphics, and brand experiences that are purposeful, refined, and built to last.</p>
+      <p class="about-new-desc">From logo systems to full motion campaigns, I work closely with clients to translate ideas into powerful visuals that move people and brands forward.</p>
+      <div class="about-tags">
+        <span class="about-tag">Motion Graphics</span>
+        <span class="about-tag">Brand Identity</span>
+        <span class="about-tag">Visual Design</span>
+        <span class="about-tag">Animation</span>
+        <span class="about-tag">Typography</span>
+      </div>
+      <a href="#" class="cta-btn" onclick="scrollToPanel('panel-contact'); return false;">Let's Work Together</a>
+    </div>
+  </div>
+</section>
+
+  <!-- PANEL 6 · CONTACT -->
+<section class="panel panel-contact" id="panel-contact">
+  <div class="contact-inner">
+    <span class="contact-num">04</span>
+    <h2 class="contact-title">Let's<br/><em>create</em><br/>together.</h2>
+    <div class="contact-details">
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <a href="mailto:yadavanurag1172@gmail.com" class="contact-link">yadavanurag1172@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">WhatsApp</span>
+        <a href="https://wa.me/919930099345" target="_blank" class="contact-link">+91 00000 00000</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Available for</span>
+        <span class="contact-value">Freelance &amp; Full-time</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Based in</span>
+        <span class="contact-value">India — Worldwide</span>
+      </div>
+    </div>
+    <div class="contact-socials">
+      <a href="https://www.instagram.com/yadav_anurag0506" target="_blank" rel="noopener" class="social-link">Instagram</a>
+      <a href="https://www.linkedin.com/in/anurag-yadav-8443413bb" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+      <a href="https://x.com/ANURAG_117" target="_blank" rel="noopener" class="social-link">Twitter / X</a>
+      <a href="https://www.behance.net/" target="_blank" rel="noopener" class="social-link">Behance</a>
+    </div>
+    <p class="contact-copy">© 2026 Anurag Yadav. All rights reserved.</p>
+  </div>
+</section>
+
+</div><!-- /#track -->
+  </div><!-- /#app -->
+
+  <script src="script.js"></script>
+  <!-- IMAGE LIGHTBOX -->
+<div id="lightbox" class="lb-wrap">
+  <div class="lb-overlay" onclick="closeLightbox()"></div>
+  <div class="lb-box">
+    <button class="lb-close" onclick="closeLightbox()">&times;</button>
+    <img id="lb-img" src="" alt="" />
+    <p id="lb-title" class="lb-title"></p>
+  </div>
+</div>
+
+<!-- VIDEO MODAL -->
+<div id="videoModal" class="vm-wrap">
+  <div class="vm-overlay" onclick="closeVideoModal()"></div>
+  <div class="vm-box">
+    <button class="vm-close" onclick="closeVideoModal()">&times;</button>
+    <video id="vm-video" controls playsinline></video>
+  </div>
+</div>
+</body>
+</html>
